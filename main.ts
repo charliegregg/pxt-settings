@@ -65,7 +65,7 @@ namespace Dice {
      */
     //% group="Dice"
     //% weight=22
-    //% blockId=dice block="Roll %Times"
+    //% blockId=dice block="Roll a D6 %Times"
     export function RollD6(Times: number): number {
         return(Dice.Roll(6, Times))
     }
@@ -75,7 +75,7 @@ namespace Dice {
      */
     //% group="Dice"
     //% weight=23
-    //% blockId=dice block="Roll %Sides||%Times"
+    //% blockId=dice block="Roll a D8 %Times"
     export function RollD8(Times: number): number {
         return (Dice.Roll(8, Times))
     }
@@ -85,7 +85,7 @@ namespace Dice {
      */
     //% group="Dice"
     //% weight=23
-    //% blockId=dice block="Roll %Sides||%Times"
+    //% blockId=dice block="Roll a D12 %Times"
     export function RollD12(Times: number): number {
         return (Dice.Roll(12, Times))
     }
