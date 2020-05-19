@@ -57,7 +57,7 @@ namespace Dice {
      */
     //% group="Custom"
     //% weight=23
-    //% block="Roll %Sides %Times"
+    //% blockId=gameask block="Roll %Sides %Times"
     export function Roll(Sides: number, Times: number): number {
         let Sum = 0
         for (let index = 0; index < Times; index++) {
@@ -71,7 +71,7 @@ namespace Dice {
      */
     //% group="Preset"
     //% weight=22
-    //% block="Roll a D6 %Times"
+    //% blockId=gameask block="Roll a D6 %Times"
     export function RollD6(Times: number): number {
         return(Dice.Roll(6, Times));
     }
@@ -81,7 +81,7 @@ namespace Dice {
      */
     //% group="Preset"
     //% weight=21
-    //% block="Roll a D8 %Times"
+    //% blockId=gameask block="Roll a D8 %Times"
     export function RollD8(Times: number): number {
         return (Dice.Roll(8, Times));
     }
@@ -91,7 +91,7 @@ namespace Dice {
      */
     //% group="Preset"
     //% weight=20
-    //% block="Roll a D12 %Times"
+    //% blockId=gameask block="Roll a D12 %Times"
     export function RollD12(Times: number): number {
         return (Dice.Roll(12, Times));
     }
