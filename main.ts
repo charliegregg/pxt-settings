@@ -18,7 +18,7 @@ namespace Blocks {
     //% block.loc.fr="$x au carré"
     //% jsdoc.loc.fr="Calcule le carré de x"
     //% x.loc.fr="le nombre"
-    function square(x: number): number { 
+    export function square(x: number): number { 
         return(x*x)
     }
 }
@@ -45,5 +45,48 @@ namespace game2wow {
         pauseUntil(() => answer !== null);
         control.popEventContext();
         return answer;
+    }
+}
+namespace Dice {
+    /**
+     * Rolls a custom dice.
+     * @param Sides
+     * @param Times
+     */
+    //% group="Dice"
+    //% weight=23
+    //% blockId=dice block="Roll %Sides||%Times"
+    export function Roll(Sides: number, Times: number): number {
+        return(Math.randomRange(1, Math.constrain(Sides, 1, 100)))
+    }
+    /**
+     * Rolls a D6.
+     * @param Times
+     */
+    //% group="Dice"
+    //% weight=22
+    //% blockId=dice block="Roll %Times"
+    export function RollD6(Times: number): number {
+        return(Dice.Roll(6, Times))
+    }
+    /**
+     * Rolls a D8.
+     * @param Times
+     */
+    //% group="Dice"
+    //% weight=23
+    //% blockId=dice block="Roll %Sides||%Times"
+    export function RollD8(Times: number): number {
+        return (Dice.Roll(8, Times))
+    }
+    /**
+     * Rolls a D12.
+     * @param Times
+     */
+    //% group="Dice"
+    //% weight=23
+    //% blockId=dice block="Roll %Sides||%Times"
+    export function RollD12(Times: number): number {
+        return (Dice.Roll(12, Times))
     }
 }
