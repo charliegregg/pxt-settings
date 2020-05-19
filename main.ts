@@ -52,7 +52,7 @@ namespace Dice {
      */
     //% group="Dice"
     //% weight=23
-    //% blockId=dice block="Roll %Sides||%Times"
+    //% blockId=dice block="Roll %Sides %Times"
     export function Roll(Sides: number, Times: number): number {
         let Sum = 0
         for (let index = 0; index < 4; index++) {
