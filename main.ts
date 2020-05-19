@@ -1,8 +1,5 @@
-controller.player2.onEvent(ControllerEvent.Connected, function () {
-    game.splash("")
-})
 controller.player2.onButtonEvent(ControllerButton.A, ControllerButtonEvent.Pressed, function () {
-	
+    game.splash(convertToText(Dice.Roll(0, 1)), "")
 })
 namespace Blocks {
     //% block="magnitude of 3d vector at x %x and y %y and z %z"
@@ -57,7 +54,11 @@ namespace Dice {
     //% weight=23
     //% blockId=dice block="Roll %Sides||%Times"
     export function Roll(Sides: number, Times: number): number {
-        return(Math.randomRange(1, Math.constrain(Sides, 1, 100)))
+        let Sum = 0
+        for (let index = 0; index < 4; index++) {
+            Sum = Sum + (Math.randomRange(1, Math.constrain(Sides, 1, 100)))
+        }
+        return(Sum)
     }
     /**
      * Rolls a D6.
