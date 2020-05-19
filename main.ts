@@ -1,5 +1,5 @@
 controller.player2.onButtonEvent(ControllerButton.A, ControllerButtonEvent.Pressed, function () {
-    game.splash(convertToText(Dice.RollD6(2)), "")
+    game.splash(convertToText(RollingDice.RollD6(2)), "")
 })
 namespace Blocks {
     //% block="magnitude of 3d vector at x %x and y %y and z %z"
@@ -50,7 +50,7 @@ namespace game2wow {
     }
 }
 //% block="Dice" color=#3b3b3b icon="\uf0c7"
-namespace Dice {
+namespace RollingDice {
     /**
      * Rolls a custom dice.
      * @param Sides
@@ -74,7 +74,7 @@ namespace Dice {
     //% weight=22
     //% blockId=RollD6 block="Roll a D6 %Times"
     export function RollD6(Times: number): number {
-        return(Dice.Roll(6, Times));
+        return(RollingDice.Roll(6, Times));
     }
     /**
      * Rolls a D8.
@@ -84,7 +84,7 @@ namespace Dice {
     //% weight=21
     //% blockId=RollD8 block="Roll a D8 %Times"
     export function RollD8(Times: number): number {
-        return (Dice.Roll(8, Times));
+        return (RollingDice.Roll(8, Times));
     }
     /**
      * Rolls a D12.
@@ -94,6 +94,6 @@ namespace Dice {
     //% weight=20
     //% blockId=RollD12 block="Roll a D12 %Times"
     export function RollD12(Times: number): number {
-        return (Dice.Roll(12, Times));
+        return (RollingDice.Roll(12, Times));
     }
 }
