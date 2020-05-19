@@ -1,10 +1,15 @@
 controller.player2.onButtonEvent(ControllerButton.A, ControllerButtonEvent.Pressed, function () {
-    game.splash(convertToText(Dice.Roll(6, 1)), "")
+    game.splash(convertToText(Dice.Roll(0, 0)), "")
 })
 namespace Blocks {
     //% block="magnitude of 3d vector at x %x and y %y and z %z"
     //% inlineInputMode=inline
     export function mag3d(x: number, y: number, z: number): number {
+        return Math.sqrt(x * x + y * y + z * z);
+    }
+    //% block="magnitude of 3d vector at x %x and y %y and z %z"
+    //% inlineInputMode=inline
+    export function mag3e(x: number, y: number, z: number): number {
         return Math.sqrt(x * x + y * y + z * z);
     }
     /**
@@ -58,7 +63,7 @@ namespace Dice {
         for (let index = 0; index < Times; index++) {
             Sum = Sum + (Math.randomRange(1, Math.constrain(Sides, 1, 100)))
         }
-        return(Sum)
+        return(Sum);
     }
     /**
      * Rolls a D6.
@@ -68,7 +73,7 @@ namespace Dice {
     //% weight=22
     //% blockId=dice block="Roll a D6 %Times"
     export function RollD6(Times: number): number {
-        return(Dice.Roll(6, Times))
+        return(Dice.Roll(6, Times));
     }
     /**
      * Rolls a D8.
@@ -78,7 +83,7 @@ namespace Dice {
     //% weight=23
     //% blockId=dice block="Roll a D8 %Times"
     export function RollD8(Times: number): number {
-        return (Dice.Roll(8, Times))
+        return (Dice.Roll(8, Times));
     }
     /**
      * Rolls a D12.
@@ -88,6 +93,6 @@ namespace Dice {
     //% weight=23
     //% blockId=dice block="Roll a D12 %Times"
     export function RollD12(Times: number): number {
-        return (Dice.Roll(12, Times))
+        return (Dice.Roll(12, Times));
     }
 }
