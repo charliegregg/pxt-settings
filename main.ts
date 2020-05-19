@@ -49,7 +49,7 @@ namespace game2wow {
         return answer;
     }
 }
-//% block="Dice" color=#314159 icon="\uf0c6"
+//% block="Dice" color=#314159 icon="\uf0c7"
 namespace Dice {
     /**
      * Rolls a custom dice.
