@@ -1,10 +1,7 @@
 {
     "name": "Settings",
     "dependencies": {
-        "device": "*",
-        "settings-blocks": "github:microsoft/pxt-settings-blocks#v1.0.0",
-        "controller": "*",
-        "Island": "github:charliegregg/island#master"
+        "device": "*"
     },
     "description": "",
     "files": [
