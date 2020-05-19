@@ -1,5 +1,5 @@
 controller.player2.onButtonEvent(ControllerButton.A, ControllerButtonEvent.Pressed, function () {
-    game.splash(convertToText(Dice.Roll(0, 0)), "")
+    game.splash(convertToText(game.ask("")), "")
 })
 namespace Blocks {
     //% block="magnitude of 3d vector at x %x and y %y and z %z"
@@ -57,7 +57,7 @@ namespace Dice {
      */
     //% group="Custom"
     //% weight=23
-    //% blockId=gameask block="Roll %Sides %Times"
+    //% blockId=RollC block="Roll %Sides %Times"
     export function Roll(Sides: number, Times: number): number {
         let Sum = 0
         for (let index = 0; index < Times; index++) {
@@ -71,7 +71,7 @@ namespace Dice {
      */
     //% group="Preset"
     //% weight=22
-    //% blockId=gameask block="Roll a D6 %Times"
+    //% blockId=RollD6 block="Roll a D6 %Times"
     export function RollD6(Times: number): number {
         return(Dice.Roll(6, Times));
     }
@@ -81,7 +81,7 @@ namespace Dice {
      */
     //% group="Preset"
     //% weight=21
-    //% blockId=gameask block="Roll a D8 %Times"
+    //% blockId=RollD8 block="Roll a D8 %Times"
     export function RollD8(Times: number): number {
         return (Dice.Roll(8, Times));
     }
@@ -91,9 +91,8 @@ namespace Dice {
      */
     //% group="Preset"
     //% weight=20
-    //% blockId=gameask block="Roll a D12 %Times"
+    //% blockId=RollD12 block="Roll a D12 %Times"
     export function RollD12(Times: number): number {
         return (Dice.Roll(12, Times));
     }
 }
-
