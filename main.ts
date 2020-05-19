@@ -57,7 +57,7 @@ namespace Dice {
      */
     //% group="Custom"
     //% weight=23
-    //%block="Roll %Sides %Times"
+    //% block="Roll %Sides %Times"
     export function Roll(Sides: number, Times: number): number {
         let Sum = 0
         for (let index = 0; index < Times; index++) {
@@ -96,3 +96,4 @@ namespace Dice {
         return (Dice.Roll(12, Times));
     }
 }
+
