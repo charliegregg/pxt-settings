@@ -1,5 +1,5 @@
 controller.player2.onButtonEvent(ControllerButton.A, ControllerButtonEvent.Pressed, function () {
-    game.splash(convertToText(game.ask("")), "")
+    game.splash(convertToText(Dice.RollD6(2)), "")
 })
 namespace Blocks {
     //% block="magnitude of 3d vector at x %x and y %y and z %z"
@@ -49,6 +49,7 @@ namespace game2wow {
         return answer;
     }
 }
+//% block="Dice" color=#314159 icon="\uf0c6"
 namespace Dice {
     /**
      * Rolls a custom dice.
