@@ -1,5 +1,5 @@
 controller.player2.onButtonEvent(ControllerButton.A, ControllerButtonEvent.Pressed, function () {
-    game.splash(convertToText(Dice.Roll(0, 1)), "")
+    game.splash(convertToText(Dice.Roll(0, 0)), "")
 })
 namespace Blocks {
     //% block="magnitude of 3d vector at x %x and y %y and z %z"
